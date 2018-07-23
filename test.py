@@ -1,11 +1,12 @@
 import pickle
 import datetime
 import quad_tree
+
+#quad_tree.data_preprocess()
+
 f = open('data/quad_tree_30.pckl', 'rb')
 data = pickle.load(f)
 f.close()
-
-#   quad_tree.data_preprocess()
 
 try:
     start = datetime.datetime.now()
