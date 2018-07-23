@@ -13,3 +13,8 @@ From my experiment, with 100,000 queries it can not handle data within one secon
 #### Reference
 1. [Quadtree Explanation](http://jimkang.com/quadtreevis/)
 2. [Kaggle worldcitiespop data](https://www.kaggle.com/max-mind/world-cities-database#worldcitiespop.csv) dataset
+
+#### Test Environment
+Python 3.6.0
+Windows 10
+Memory 12GB / CPU i5-6600
