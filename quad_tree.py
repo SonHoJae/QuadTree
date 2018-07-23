@@ -4,6 +4,7 @@ import pickle
 import pandas as pd
 from collections import defaultdict
 
+depth = 25
 def binary_direction(lat, long, left=-54.933333, right=82.483333, down=-179.9833333, up=180.0,  depth=1):
     location = ''
     for idx in range(depth):
@@ -37,7 +38,8 @@ def data_preprocess():
     quad_tree = defaultdict(set)
 
     for index, row in df.iterrows():
-        quad_loc =binary_direction(row['Latitude'], row['Longitude'], left_most, right_most, down_most, up_most, depth=30)
+        quad_loc =binary_direction(row['Latitude'], row['Longitude'], left_most, right_most, down_most, up_most,
+                                   depth=depth)
         quad_tree[row['Region']].add(quad_loc)
 
     geo_index = {}
@@ -46,6 +48,6 @@ def data_preprocess():
             **dict.fromkeys(list(v),k)
         )
 
-    f = open('quad_tree_30.pckl', 'wb')
+    f = open('data/quad_tree_'+str(depth)+'.pckl', 'wb')
     pickle.dump(geo_index, f)
     f.close()

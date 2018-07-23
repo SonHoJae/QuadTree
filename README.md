@@ -6,6 +6,10 @@
 
 ##### I used [Kaggle worldcitiespop data](https://www.kaggle.com/max-mind/world-cities-database#worldcitiespop.csv) dataset for experiment
 
+#### Simulation
+![QuadTree Simulation](https://i.imgur.com/zClUHqx.png "QuadTree Simulation")
+From my experiment, with 100,000 queries it can not handle data within one second as shown above
+
 #### Reference
 1. [Quadtree Explanation](http://jimkang.com/quadtreevis/)
 2. [Kaggle worldcitiespop data](https://www.kaggle.com/max-mind/world-cities-database#worldcitiespop.csv) dataset
